@@ -47,7 +47,7 @@ from Menu import Menu
 
 if __name__ == '__main__':
 
-    print("oh god help meee helpppp")
+    print("<<<<<<<<<<<----------- Principal ----------->>>>>>>>>>>")
 
     print("Carga Sabores")    
     MS = ManejaSabores()
@@ -57,6 +57,14 @@ if __name__ == '__main__':
     print("\nCarga Helados")
     MH = ManejaHelados()
     MH.MostrarHeladosTodos()
+    
+    print("Cargando helado")
+    #MH.RegistrarHelado(MS)
+    
+    print("\n")
+    #MH.MostrarHeladosTodos()
+
+
 
     print("\nMenu activce")
     

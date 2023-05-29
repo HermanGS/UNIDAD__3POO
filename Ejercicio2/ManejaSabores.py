@@ -21,8 +21,27 @@ class ManejaSabores:
         archivo.close()
 
     def MostrarSaboresTodos(self):
-        print("... Mostrando Sabores ...")
+        if len(self.__ListaSabores) != 0:
+            print("... Mostrando Sabores ...")
+            for i in range(len(self.__ListaSabores)):
+                print(self.__ListaSabores[i])
+        else:
+            print("No hay Sabores Registrados")
+            print("\n")
+        
+    def MostrarSabores(self):
         for i in range(len(self.__ListaSabores)):
             print(self.__ListaSabores[i])
 
+
+    def BuscarSaborID(self,id):
+        i = 0
+        while i < len(self.__ListaSabores) and self.__ListaSabores[i].retornaID() != id:
+            i = i + 1
+        if i <len(self.__ListaSabores):
+            return self.__ListaSabores[i]
+        #print("No se encontró el sabor Buscado por ID")
+
+    def retornaCantidadSabores(self):
+        return len(self.__ListaSabores)
     

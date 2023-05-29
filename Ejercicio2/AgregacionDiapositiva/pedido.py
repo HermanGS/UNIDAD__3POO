@@ -3,8 +3,8 @@ class Pedido:
     __idPedido: int
     __numeroMesa: int
     __mozo: object
-    __bebidas: list
-    __platos: list
+    __bebidas = []
+    __platos = []
     
     
     @classmethod
@@ -29,20 +29,20 @@ class Pedido:
             self.__platos.append(plato)
 
 
-def cerrarPedido(self):
-    print('Pedido número: ',self.__idPedido)
-    total = 0
-    
-    print('Bebidas')
-    for bebida in self.__bebidas:
-        precio = bebida.getPrecio()
-        print('{0:20s} {1:4.2f}'.format(bebida.getDenominacion(), precio))
-        total+=precio
+    def cerrarPedido(self):
+        print('Pedido número: ',self.__idPedido)
+        total = 0
+        
+        print('Bebidas')
+        for bebida in self.__bebidas:
+            precio = bebida.getPrecio()
+            print('{0:20s} {1:4.2f}'.format(bebida.getDenominacion(), precio))
+            total+=precio
 
-    print('Platos')
-    for plato in self.__platos:
-        precio = plato.getPrecio()
-        print('{0:20s} {1:4.2f}'.format(plato.getDescripcion(), precio))
-        total+=precio
+        print('Platos')
+        for plato in self.__platos:
+            precio = plato.getPrecio()
+            print('{0:20s} {1:4.2f}'.format(plato.getDescripcion(), precio))
+            total+=precio
 
-    print('Total a pagar: {0:4.2f}'.format(total))
+        print('Total a pagar: {0:4.2f}'.format(total))

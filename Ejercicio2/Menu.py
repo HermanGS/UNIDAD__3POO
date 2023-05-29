@@ -47,9 +47,11 @@ class Menu:
 
     def op1(self,ManejadorSabores,ManejadorHelados):
         print("Entro al 1 ")
+        ManejadorHelados.RegistrarHelado(ManejadorSabores)
 
     def op2(self,ManejadorSabores,ManejadorHelados):
         print("Entro al 2 ")
+        ManejadorHelados.Sabores5MasPedidos(ManejadorSabores)
 
     def op3(self,ManejadorSabores,ManejadorHelados):
         print("Entro al 3 ")

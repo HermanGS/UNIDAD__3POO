@@ -18,4 +18,7 @@ class Sabor:
         self.__Ingredientes = Ingredientes
 
     def __str__(self) -> str:
-        return "id Sabor : {} Nombre : {} Ingredientes : {}".format(self.__idSabor,self.__Nombre,self.__Ingredientes)
+        return "(id : {} Nombre : {} Ingredientes : {})".format(self.__idSabor,self.__Nombre,self.__Ingredientes)
+    
+    def retornaID(self):
+        return self.__idSabor
