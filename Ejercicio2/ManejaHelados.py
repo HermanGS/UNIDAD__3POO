@@ -46,6 +46,7 @@ class ManejaHelados:
             Respuesta = ManejadorSabores.BuscarSaborID(id)
             if type(Respuesta) == Sabor:
                 Sabores.append(Respuesta)
+                print("\nSabor [ {} ] Añadido al Helado \n".format(Respuesta))
             else:
                 print(" - No se encontró el sabor buscado - o su opcion fue 0 (cero)")
         
@@ -83,3 +84,12 @@ class ManejaHelados:
             print(f"ID del sabor: {sabor}, cantidad de pedidos: {cantidad}")
 
 
+    def ContarRepitenciaSabor(self,sabor):
+        contadorTotal = 0
+        for i in range(len(self.__ListaHelados)):
+            #print("Interno CT",contadorTotal,"Interno CdeHelado",self.__ListaHelados[i].contarRepitenciaSaborCH(sabor))
+            #print("ContadorTotal + Contador de Helado  = ",contadorTotal + self.__ListaHelados[i].contarRepitenciaSaborCH(sabor))
+            #contadorTotal = contadorTotal + self.__ListaHelados[i].contarRepitenciaSaborCH(sabor)
+            contadorTotal = self.__ListaHelados[i].contarRepitenciaSaborCH(sabor)
+        print("Contador Total Helados : ",contadorTotal)
+        return contadorTotal

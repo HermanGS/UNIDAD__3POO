@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
 
 
-    print("\nMenu activce")
+    print("\nMenu : \n")
     
 
     Menuc = Menu()

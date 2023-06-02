@@ -45,3 +45,45 @@ class ManejaSabores:
     def retornaCantidadSabores(self):
         return len(self.__ListaSabores)
     
+    def Sabores5MasPedidosOriginal(self,ManejadorHelados):
+        listaContadores = []
+        for i in range(len(self.__ListaSabores)):
+            CantidadTotal = ManejadorHelados.ContarRepitenciaSabor(self.__ListaSabores[i])
+            #listaContadores.append(CantidadTotal - CantidadTotal/2)
+            listaContadores.append(CantidadTotal)
+
+
+        listaDoble = list(zip(self.__ListaSabores,listaContadores))
+        
+        
+        listaContadores.sort(reverse = True)
+        
+        if len(listaContadores) >= 5:
+            print("Los 5 sabores más Pedidos : ")
+            for i in range(5):
+                print(self.__Contadores[i])
+        else :
+            print("Los 5 sabores más Pedidos : (No llegan a 5)") 
+            for i in listaContadores:
+                print(i)
+
+
+
+        listaDoble.sort(key = lambda x : x[1] ,reverse = True)
+
+        for i in range(len(listaDoble)):
+            print(listaDoble[i][0])
+
+
+
+
+
+
+
+    """3.     Ingresar un número de sabor y estimar el total de gramos vendidos. 
+Para un helado se estima la cantidad de gramos de cada sabor dividiendo los gramos del helado en la cantidad de sabores.
+Por ejemplo, si se vendió un helado de 1000 gr de chocolate, frutilla, limón y americana. 
+Se estima que en este helado se vendió de cada sabor 1000 / 4 = 250gr."""
+    def EstimarSaborMayorCantGramos(self,sabor):
+        for i in range(len(self.__ListaSabores)):
+            pass

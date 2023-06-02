@@ -23,4 +23,20 @@ class Helado:
     def __str__(self) -> str:
         return "Gramos : {} Precio : {} \n Sabores :{}".format(self.__Gramos,self.__Precio,self.retornaCadenaSabores())
 
+    def contarRepitenciaSaborCH(self,sabor):
+        contador = 0
+        for i in range(len(self.__ListaSabores)):
+            if sabor == self.__ListaSabores[i]:
+                contador = contador + 1
+        valor = contador
+        print("Contador helado : ",contador)
+        return valor
+    
+    
 
+
+    def contarGramos(self):
+        if len(self.__ListaSabores):
+            pass
+
+    
