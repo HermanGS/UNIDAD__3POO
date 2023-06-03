@@ -29,14 +29,24 @@ class Helado:
             if sabor == self.__ListaSabores[i]:
                 contador = contador + 1
         valor = contador
-        print("Contador helado : ",contador)
+        #print("Contador helado : ",contador)
         return valor
     
     
 
 
-    def contarGramos(self):
-        if len(self.__ListaSabores):
-            pass
-
+    def contarGramosPorSaborHelado(self,sabor): 
+        if len(self.__ListaSabores) != 0: # Para no dividir los gramos por 0 
+                                                         
+            # funcion : 
+            
+            gramosCadaSabor = self.__Gramos / len(self.__ListaSabores) # Obtener el peso de cada bocha xd
+            repeticionesSabor = 0                                      # Contador repeticiones de cada sabor
+            for i in range(len(self.__ListaSabores)):
+                if sabor == self.__ListaSabores[i]:
+                    repeticionesSabor = repeticionesSabor + 1    # cuento 
+            return repeticionesSabor * gramosCadaSabor           # cantidad de bochas * cuanto pesa cada una = [ total de gramos de un sabor en un helado ]
+        
+        
+        else: print("No tiene sabores este helado") 
     

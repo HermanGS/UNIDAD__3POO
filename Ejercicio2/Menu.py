@@ -44,21 +44,49 @@ b.     A través de un menú de opciones realice las siguientes funcionalidades:
 
 class Menu:
 
-
+    #ITEM 1
     def op1(self,ManejadorSabores,ManejadorHelados):
         print("Entro al 1 ")
         ManejadorHelados.RegistrarHelado(ManejadorSabores)
 
+    #ITEM 2
     def op2(self,ManejadorSabores,ManejadorHelados):
         print("Entro al 2 ")
         ManejadorSabores.Sabores5MasPedidosOriginal(ManejadorHelados)
 
+    #ITEM 3
     def op3(self,ManejadorSabores,ManejadorHelados):
         print("Entro al 3 ")
 
+
+        print("Ingresa una ID de Sabor para calcular el [ Valor Total de Gramos Vendidos de ese Sabor ] ")
+        id = input("Respuesta :  ")
+        print("\n")
+        while id.isdigit() == False:
+                print("ERROR - no es un numero")
+                print("Ingresa una ID de Sabor para calcular el [ Valor Total de Gramos Vendidos de ese Sabor ] ")
+                id = input("Respuesta :  ")
+                print("\n")
+        id = int(id)
+        ManejadorSabores.EstimarSaborMayorCantGramos(id,ManejadorHelados)
+
+    #ITEM 4
     def op4(self,ManejadorSabores,ManejadorHelados):
         print("Entro al 4 ")
 
+        print("Ingresa una ID de Sabor para calcular el [ Valor Total de Gramos Vendidos de ese Sabor ] ")
+        helado = input("Respuesta :  ")
+        print("\n")
+        while id.isdigit() == False:
+                print("ERROR - no es un numero")
+                print("Ingresa una ID de Sabor para calcular el [ Valor Total de Gramos Vendidos de ese Sabor ] ")
+                id = input("Respuesta :  ")
+                print("\n")
+        id = int(id)
+
+
+
+    #ITEM 5
     def op5(self,ManejadorSabores,ManejadorHelados):
         print("Entro al 5 ")
 
