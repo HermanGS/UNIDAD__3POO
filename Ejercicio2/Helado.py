@@ -45,6 +45,8 @@ class Helado:
             for i in range(len(self.__ListaSabores)):
                 if sabor == self.__ListaSabores[i]:
                     repeticionesSabor = repeticionesSabor + 1    # cuento 
+            print("RepeticionesSabor : ",repeticionesSabor )
+            print("gramosCadaSabor : ",gramosCadaSabor)
             return repeticionesSabor * gramosCadaSabor           # cantidad de bochas * cuanto pesa cada una = [ total de gramos de un sabor en un helado ]
         
         
